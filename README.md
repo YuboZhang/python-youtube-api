@@ -47,3 +47,8 @@ You are required to get the API key from Google API console in order to use this
 <li><a href="https://developers.google.com/youtube/v3/">YouTube API v3 Docs</a></li>
 <li><a href="http://code.google.com/apis/console">Obtain API Key</a></li>
 </ul>
+
+<h3>Note</h3>
+<ul>
+<li>Python version should be later than 3.7.3. Python 3.7.8 works well</li>
+</ul>
