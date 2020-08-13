@@ -50,5 +50,6 @@ You are required to get the API key from Google API console in order to use this
 
 <h3>Note</h3>
 <ul>
-<li>Python version should be at least 3.7.4. Note that Python 3.7.8 works well. </li>
+<li>Python version should be at least 3.7.4. </li>
+<li>Note that Python 3.7.8 works well. </li>
 </ul>
