@@ -45,5 +45,5 @@ class channelVideo:
 
     def create_df(self):
         df = pd.DataFrame().from_dict(self.videos)
-        df.to_csv(SAVE_PATH+"search_channel_id.csv")
+        df.to_csv(SAVE_PATH+"search_channel_id.csv", encoding="utf-8-sig")
 

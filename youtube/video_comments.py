@@ -42,11 +42,13 @@ class VideoComment:
 
     def get_video_comments(self):
         url_response = json.loads(openURL(YOUTUBE_COMMENT_URL, self.params))
+        print("url_response:", url_response)
         nextPageToken = url_response.get("nextPageToken")
         self.load_comments(url_response)
 
         while nextPageToken:
             self.params.update({'pageToken': nextPageToken})
+            print("nextPageToken: ", nextPageToken)
             url_response = json.loads(openURL(YOUTUBE_COMMENT_URL, self.params))
             nextPageToken = url_response.get("nextPageToken")
             self.load_comments(url_response)
@@ -55,7 +57,7 @@ class VideoComment:
 
     def create_df(self):
         df = pd.DataFrame().from_dict(self.comments)
-        df.to_csv(SAVE_PATH+"parent_video_comment.csv")
+        df.to_csv(SAVE_PATH+"parent_video_comment.csv", encoding="utf-8-sig")
 
         df = pd.DataFrame().from_dict(self.replies)
-        df.to_csv(SAVE_PATH+"comment_reply.csv")
+        df.to_csv(SAVE_PATH+"comment_reply.csv", encoding="utf-8-sig")

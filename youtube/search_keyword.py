@@ -62,11 +62,11 @@ class searchVideo:
 
     def create_df(self):
         df = pd.DataFrame().from_dict(self.videos)
-        df.to_csv(SAVE_PATH+"search_term_videos.csv")
+        df.to_csv(SAVE_PATH+"search_term_videos.csv", encoding="utf-8-sig")
 
         df = pd.DataFrame().from_dict(self.channels)
-        df.to_csv(SAVE_PATH+"search_term_channel.csv")
+        df.to_csv(SAVE_PATH+"search_term_channel.csv", encoding="utf-8-sig")
 
         df = pd.DataFrame().from_dict(self.playlists)
-        df.to_csv(SAVE_PATH+"search_term_playlist.csv")
+        df.to_csv(SAVE_PATH+"search_term_playlist.csv", encoding="utf-8-sig")
 
